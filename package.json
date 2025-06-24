@@ -14,9 +14,12 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.(js|jsx|ts|tsx)": ["pnpm lint::file","pnpm build"]
+    "*.{js,jsx,ts,tsx,json,css,md,scss}": [
+      "pnpm lint::fix::write"
+    ]
   },
   "dependencies": {
+    "@types/node": "^24.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
