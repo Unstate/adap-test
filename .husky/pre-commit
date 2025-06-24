@@ -1,2 +1,4 @@
-pnpm lint:fix
-pnpm build
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+echo "Hello from pre-commit" >> .husky/pre-commit
+pnpm lint-staged

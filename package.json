@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "lint::debug": "eslint --debug src/",
+    "lint::file": "eslint --fix",
     "lint::fix::write": "eslint --debug src/ --fix",
     "preview": "vite preview",
     "prepare": "husky"
@@ -18,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.(js|jsx|ts|tsx)": ["pnpm lint::fix::write","pnpm build", "git add"]
+    "*.(js|jsx|ts|tsx)": ["pnpm lint::file","pnpm build"]
   },
   "dependencies": {
     "react": "^19.1.0",
